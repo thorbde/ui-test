@@ -12,7 +12,7 @@ const Pagination = (props: {
           className="Pagination__back Pagination__btn"
           onClick={() => props.setPaginationPage(props.paginationPage - 1)}
         >
-          Previous
+          Back
         </button>
       )}
 
