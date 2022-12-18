@@ -19,8 +19,8 @@ const App = () => {
   const [deviceState, setDeviceState] = useState<DeviceListType | undefined>(
     undefined
   );
-  let [searchState, setSearchState] = useState("");
-  let [filteredDeviceState, setFilteredDeviceState] = useState<
+  const [searchState, setSearchState] = useState("");
+  const [filteredDeviceState, setFilteredDeviceState] = useState<
     DeviceListType | undefined
   >(undefined);
 
