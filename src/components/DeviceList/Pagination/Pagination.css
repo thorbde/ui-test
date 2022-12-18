@@ -8,6 +8,7 @@
   color: var(--text-2);
   cursor: pointer;
   transition: var(--transition-link);
+  user-select: none;
 }
 
 .Pagination__btn:hover {
