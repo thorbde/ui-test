@@ -38,3 +38,17 @@
     height: 257px;
   }
 }
+
+.DevicePage__error {
+  text-align: center;
+  margin: 72px auto;
+  max-width: 400px;
+}
+
+.DevicePage__error-header {
+  color: var(--text-3);
+}
+
+.DevicePage__error-message {
+  color: var(--text-2);
+}

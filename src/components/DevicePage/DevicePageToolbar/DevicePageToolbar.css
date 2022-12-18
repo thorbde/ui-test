@@ -1,0 +1,26 @@
+.DevicePageToolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  padding: 8px 28px 7px 28px;
+  border-bottom: 1px solid var(--neutral-3);
+}
+
+.DevicePageToolbar__device-name {
+  margin: 0 auto;
+  color: var(--text-3);
+  font-size: 14px;
+  line-height: 44px;
+}
+
+.DevicePageToolbar::after {
+  content: "";
+  width: 14px;
+}
+
+.DevicePageToolbar__back-btn {
+  left: 30px;
+  width: 14px;
+  height: 14px;
+}

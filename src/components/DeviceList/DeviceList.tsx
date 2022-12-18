@@ -15,7 +15,7 @@ const DeviceList = (props: {
   if (props.filteredDeviceState) {
     return (
       <>
-        <span className="DeviceList__lastUpdated">
+        <span className="DeviceList__last-updated">
           Device list last updated {lastUpdated}
         </span>
 

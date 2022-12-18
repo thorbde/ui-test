@@ -1,6 +1,6 @@
 import "./Search.css";
 import searchIcon from "../../../assets/icons/search.svg";
-import { FormEvent, useRef } from "react";
+import { useRef } from "react";
 
 const Search = (props: { setSearchState: Function }) => {
   const inputRef = useRef<HTMLInputElement>(null);

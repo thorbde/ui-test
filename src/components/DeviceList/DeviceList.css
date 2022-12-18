@@ -2,11 +2,18 @@
   padding: 52px;
 }
 
+.DeviceList__last-updated {
+  padding-top: 8px;
+  text-align: center;
+  color: var(--text-3);
+}
+
 .DeviceList__labels {
   display: grid;
-  grid-template-columns: 136px 254px 1fr;
-  height: 33px;
+  grid-template-columns: 2fr 4fr 12fr;
+  gap: 16px;
   border-bottom: 1px solid var(--neutral-3);
+  align-items: flex-end;
 }
 
 .DeviceList__device-count {

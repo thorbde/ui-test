@@ -2,14 +2,19 @@ import Header from "./Header/Header";
 import Toolbar from "./Toolbar/Toolbar";
 import DeviceList from "./DeviceList/DeviceList";
 import DevicePage from "./DevicePage/DevicePage";
+
 import ViewType from "../types/ViewType";
 import DeviceListType from "../types/DeviceListType";
+
 import fetchDevices from "../utils/fetchDevices";
+
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+
 import "./App.css";
 
 const App = () => {
+  const [errorState, setErrorState] = useState(false);
   const [viewState, setViewState] = useState<ViewType>("list");
   const [deviceState, setDeviceState] = useState<DeviceListType | undefined>(
     undefined
@@ -25,12 +30,12 @@ const App = () => {
         localStorage.setItem("deviceState", JSON.stringify(list));
         return setDeviceState(list);
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
         const offlineState = localStorage.getItem("deviceState");
         if (offlineState !== null) {
           return setDeviceState(JSON.parse(offlineState));
         }
+        return setErrorState(true);
       });
   }, []);
 
@@ -52,40 +57,47 @@ const App = () => {
     }
   }, [deviceState, searchState]);
 
-  if (filteredDeviceState && deviceState) {
-    return (
-      <div className="App">
-        <Header />
-        <Toolbar
-          viewState={viewState}
-          setViewState={setViewState}
-          setSearchState={setSearchState}
-        />
-        <Routes>
-          <Route
-            path="/:deviceid"
-            element={<DevicePage deviceState={deviceState} />}
-          />
-          <Route
-            path="/"
-            element={
-              <DeviceList
-                viewState={viewState}
-                filteredDeviceState={filteredDeviceState}
-              />
-            }
-          />
-        </Routes>
-      </div>
-    );
-  }
   return (
-    <div className="Error">
-      <h1 className="Error__header">We're sorry!</h1>
-      <p className="Error__message">
-        There was an issue when connecting to the database, and no local copy of
-        the database was found on your machine. Please try again later!
-      </p>
+    <div className="App">
+      <Header />
+      {filteredDeviceState && deviceState && (
+        <>
+          <Routes>
+            <Route
+              path="/:deviceid"
+              element={<DevicePage deviceState={deviceState} />}
+            />
+            <Route
+              path="/"
+              element={
+                <>
+                  <Toolbar
+                    viewState={viewState}
+                    setViewState={setViewState}
+                    setSearchState={setSearchState}
+                  />
+                  <DeviceList
+                    viewState={viewState}
+                    filteredDeviceState={filteredDeviceState}
+                  />
+                </>
+              }
+            />
+          </Routes>
+        </>
+      )}
+      {errorState && (
+        <div className="App">
+          <main className="Error">
+            <h1 className="Error__header">We're sorry!</h1>
+            <p className="Error__message">
+              There was an issue when connecting to the database, and no local
+              copy of the database was found on your machine. Please try again
+              later!
+            </p>
+          </main>
+        </div>
+      )}
     </div>
   );
 };

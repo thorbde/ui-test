@@ -4,3 +4,17 @@
   height: 100vh;
   overflow-x: hidden;
 }
+
+.Error {
+  text-align: center;
+  margin: 72px auto;
+  max-width: 400px;
+}
+
+.Error__header {
+  color: var(--text-3);
+}
+
+.Error__message {
+  color: var(--text-2);
+}
