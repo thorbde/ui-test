@@ -1,0 +1,19 @@
+.Pagination {
+  align-self: center;
+  margin-bottom: 2rem;
+}
+
+.Pagination__btn {
+  font-size: 14px;
+  color: var(--text-2);
+  cursor: pointer;
+  transition: var(--transition-link);
+}
+
+.Pagination__btn:hover {
+  color: var(--ubiquiti-blue);
+}
+
+.Pagination__back {
+  margin-right: 2rem;
+}

@@ -12,6 +12,7 @@ import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import "./App.css";
+import LastUpdated from "./LastUpdated/LastUpdated";
 
 const App = () => {
   const [errorState, setErrorState] = useState(false);
@@ -76,6 +77,7 @@ const App = () => {
                     setViewState={setViewState}
                     setSearchState={setSearchState}
                   />
+                  <LastUpdated lastUpdated={filteredDeviceState.lastUpdated} />
                   <DeviceList
                     viewState={viewState}
                     filteredDeviceState={filteredDeviceState}

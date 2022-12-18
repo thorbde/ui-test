@@ -1,11 +1,11 @@
-.DeviceList {
-  padding: 52px;
+.DeviceList__wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
-.DeviceList__last-updated {
-  padding-top: 8px;
-  text-align: center;
-  color: var(--text-3);
+.DeviceList {
+  padding: 2rem;
+  padding-top: 52px;
 }
 
 .DeviceList__labels {
