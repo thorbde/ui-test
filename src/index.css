@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  font-family: "Lato", sans-serif;
+  background: none;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --ubiquiti-blue: #006fff;
+  --neutral-2: #f6f6f8;
+  --neutral-3: #ededf0;
+  --neutral-4: #dbdce1;
+  --neutral-8: #838691;
+  --hover: #fbfbfb;
+  --gray-4: #bdbdbd;
+  --text-2: #000000a6;
+  --text-3: #00000073;
+
+  --logo-radial-default: radial-gradient(
+    100% 100% at 50% 0%,
+    #006fff 0%,
+    #003c9e 100%
+  );
+  --logo-radial-modified: radial-gradient(
+    100% 100% at 50% 0%,
+    #005ed9 0%,
+    #003386 100%
+  );
+
+  --transition-link: color 0.3s ease 0s;
+}

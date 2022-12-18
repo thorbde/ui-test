@@ -1,0 +1,50 @@
+.Header {
+  display: flex;
+  align-items: center;
+  background-color: var(--neutral-2);
+  border-bottom: 1px solid var(--neutral-3);
+}
+
+.Header__logo {
+  background: url("../../assets/logos/logo-default.svg"),
+    var(--logo-radial-default);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 56px;
+  height: 55px;
+  cursor: pointer;
+}
+
+.Header__logo:hover {
+  background: url("../../assets/logos/logo-hover.svg"),
+    var(--logo-radial-modified);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.Header__logo:active {
+  background: url("../../assets/logos/logo-active.svg"),
+    var(--logo-radial-modified);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.Header__title {
+  margin-left: 18px;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--neutral-8);
+}
+
+.Header__author {
+  transition: var(--transition-link);
+  text-align: right;
+  margin-right: 28px;
+  margin-left: auto;
+  color: var(--text-2);
+  text-decoration: none;
+}
+
+.Header__author:hover {
+  color: var(--ubiquiti-blue);
+}

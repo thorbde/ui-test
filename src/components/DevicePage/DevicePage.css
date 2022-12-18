@@ -1,0 +1,40 @@
+.DevicePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.DevicePage__icon {
+  height: 257px;
+  width: 257px;
+}
+
+.DevicePage__info li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--neutral-3);
+  font-size: 14px;
+  line-height: 24px;
+  padding: 1px 0;
+  color: var(--text-2);
+}
+
+.DevicePage__info {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 600px) {
+  .DevicePage {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 64px;
+  }
+  .DevicePage__info {
+    max-width: 400px;
+    flex-grow: 1;
+    height: 257px;
+  }
+}

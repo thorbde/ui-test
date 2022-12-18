@@ -1,0 +1,14 @@
+.Toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 8px 28px 7px 30px;
+  border-bottom: 1px solid var(--neutral-3);
+}
+
+@media screen and (min-width: 400px) {
+  .Toolbar {
+    flex-direction: row;
+    align-items: center;
+  }
+}

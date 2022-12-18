@@ -1,0 +1,36 @@
+.DeviceList {
+  padding: 52px;
+}
+
+.DeviceList__labels {
+  display: grid;
+  grid-template-columns: 136px 254px 1fr;
+  height: 33px;
+  border-bottom: 1px solid var(--neutral-3);
+}
+
+.DeviceList__device-count {
+  color: var(--gray-4);
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.DeviceList__line-header {
+  color: var(--text-2);
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.DeviceList__name-header {
+  color: var(--text-2);
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.DeviceList--grid-view {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 233px);
+  gap: 24px;
+}
