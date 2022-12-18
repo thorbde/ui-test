@@ -3,7 +3,7 @@ import DeviceListType from "../../types/DeviceListType";
 import DeviceType from "../../types/DeviceType";
 import ViewType from "../../types/ViewType";
 import "./DeviceList.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Pagination from "./Pagination/Pagination";
 
 const perPage = 25;
@@ -14,6 +14,10 @@ const DeviceList = (props: {
 }) => {
   const [paginationPage, setPaginationPage] = useState(1);
   const maxPage = Math.ceil(props.filteredDeviceState.devices.length / perPage);
+
+  useEffect(() => {
+    setPaginationPage(1);
+  }, [props.filteredDeviceState]);
 
   return (
     <section className="DeviceList__wrapper">
