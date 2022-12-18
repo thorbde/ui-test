@@ -2,6 +2,9 @@
 
 A front end implementation of the Ubiquiti device database.
 
+First run `npm i`
+Second, run `npm run build` to build the app.
+
 The project was built with the React framework and was written in TypeScript, as specified in the test. I decided to use Vite as a build tool instead of Webpack, for its performance and comparable stability.
 
 The codebase is structured with one folder for each component, where the main component file is stored as well as subcomponents, as well as stylesheets related to the components.
